@@ -1,0 +1,13 @@
+services:
+  faq-chatbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./logs:/app/logs

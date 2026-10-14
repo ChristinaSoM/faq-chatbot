@@ -1,0 +1,19 @@
+[project]
+name = "faq-chatbot"
+version = "1.0.0"
+description = "AI-Powered FAQ Chatbot"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "langchain>=1.2.15",
+    "langchain-core>=1.3.0",
+    "langchain-mistralai>=1.1.2",
+    "langgraph>=1.1.6",
+    "python-dotenv>=1.2.2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
